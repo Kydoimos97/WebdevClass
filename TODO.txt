@@ -1,0 +1,10 @@
+Account create php
+// TODO Account already exists with the given email
+// TODO Add the sanitizer -- saltySanitizer.php
+
+Index.php -- all [Willem]
+# TODO revamp roles
+
+Optional
+UploadImage.php -- Fix
+All -- Lock scrollbar to top

@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
                 </div>
             </li>';
             } ?>
-            <?php if (isset($_SESSION['displayName']) && strtolower($_SESSION['displayName']) == "admin") {
+            <?php if (isset($_SESSION['userRole']) && strtolower($_SESSION['userRole']) == "admin") {
                 # TODO revamp roles
                 echo '           
             <li>
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
                 </div>
             </li>';
             } ?>
-            <?php if (isset($_SESSION['displayName']) && strtolower($_SESSION['displayName']) == "admin") {
+            <?php if (isset($_SESSION['userRole']) && strtolower($_SESSION['userRole']) == "admin") {
                 echo '           
             <li>
                 <div class="text-center pt-3 mb-2 mt-3 pb-0 w-75 center-block">
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
                 </div>
             </li>';
             } ?>
-            <?php if (isset($_SESSION['displayName']) && strtolower($_SESSION['displayName']) == "admin") {
+            <?php if (isset($_SESSION['userRole']) && strtolower($_SESSION['userRole']) == "admin") {
                 echo '           
             <li>
                 <div class="text-center pt-3 mb-2 mt-3 pb-0 w-75 center-block">

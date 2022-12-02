@@ -23,6 +23,7 @@ function logIn(): void
             $userArray = mysqli_fetch_array($result);
             $_SESSION['AuthSession'] = true;
             $_SESSION['displayName'] = $userArray['displayName'];
+            $_SESSION['userRole'] = $userArray['role'];
             $_SESSION['message'] = "Login Successful Redirecting";
             $_SESSION['userName'] = $userName;
             header("refresh:2;url=AccountView.php");

@@ -17,10 +17,11 @@ Web Demo Presentation (10 Minute)
 Introduction
 -Include our group and project introduction (Joel)
 
+-Database [Willem Tables]
+
 Webpage and Case Use Demo
 -Account Login(Justin)
     -My account
-        -ho [login.php, password php, topbar[shoppingCart.php],
 -Account Create(Justin)
     -ho
 -Admin Page (Justin)
@@ -30,10 +31,8 @@ Webpage and Case Use Demo
     -ho
 -KPI Viewer (Joel)
 -ProductStore (Joel)
-    -ho
 -Product Detail (Joel)
     -ho
-
 -Product Cart (Joel)
     -ho
 

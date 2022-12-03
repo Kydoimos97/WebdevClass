@@ -197,8 +197,7 @@ function display_data($array): string
                     <div class="card w-5 transparent-divider border-0 d-flex justify-content-center">
                     </div>
                     <div class="card w-100 page-title border-0 center-block ">
-                        <p class="page-title pt-3 pb-3 border-bottom" style="color: var(--offwhite)">Gift card
-                            detail</p>
+                        <p class="page-title pt-3 pb-3 border-bottom" style="color: var(--offwhite)">Database Tools</p>
                     </div>
                     <div class="card w-5 transparent-divider border-0 d-flex justify-content-center">
                     </div>

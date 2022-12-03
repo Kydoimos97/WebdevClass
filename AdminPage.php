@@ -7,6 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
     logOut();
 }
 
+if (!isset($_SESSION['userName']) || $_SESSION['userName'] == "") {
+    header("Location: UnAuthorized.html");
+}
+
 function display_data($array): string
 {
     // start table

@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
             </div>
         </nav>
 
-        <!--Main Content-->
+        <!--Main Content present get the details from the db and show db-->
         <section class="container w-75 h-100 background-default p-5">
             <div class="container py-lg-5">
                 <div class="row d-flex justify-content-center align-items-baseline h-95">
@@ -231,11 +231,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
                                         </div>
                                         <div class="row justify-content-center">
                                             <div class="text-center w-100 pt-2">
-                                                <form action="" method="post">
+                                                <a href="UnderConstruction.html">
                                                     <button class="btn btn-primary btn-block default-button-main"
                                                             type="submit" name="addCart" value="Submit">Add to cart
                                                     </button>
-                                                </form>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

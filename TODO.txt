@@ -9,5 +9,31 @@ Optional
 UploadImage.php -- Fix
 All -- Lock scrollbar to top
 
-5000@hello.com
-HellOooooooo123#@
+
+
+
+Web Demo Presentation (10 Minute)
+
+Introduction
+-Include our group and project introduction
+
+Webpage and Case Use Demo
+-Account Login(Justin)
+    -My account
+        -ho [login.php, password php, topbar[shoppingCart.php],
+-Account Create(Justin)
+    -ho
+-Admin Page (Justin)
+    -ho
+-KPI List (Justin)
+    -ho
+-KPI Viewer (Justin)
+-ProductStore (Joel)
+    -ho
+-Product Detail (Joel)
+    -ho
+-Account Search (Joel)
+-Product Cart (Joel)
+    -ho
+
+Final Statements (

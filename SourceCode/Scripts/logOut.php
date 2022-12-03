@@ -1,6 +1,6 @@
 <?php
 
-function logOut(): void
+function logOut(): void // present unsetting
 {
     unset($_SESSION["AuthSession"]);
     unset($_SESSION['userName']);

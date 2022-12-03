@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['userName'])) {
-    header("Location: AccountLogin.php");
+if (!isset($_SESSION['userName']) || $_SESSION['userName'] == "") {
+    header("Location: UnAuthorized.html");
 }
+
 $counter = 0;
 $conn = mysqli_connect("localhost", "root", "", "urbanstore");
 $result = mysqli_query($conn, "SELECT userid FROM `users` where userName = '" . $_SESSION['userName'] . "'");
@@ -92,7 +93,7 @@ function updateCart(): void
             </li>
 
             <li>
-                <a href="product-List.php">Store</a>
+                <a href="ProductStore.php">Store</a>
             </li>
             <li>
                 <a href="AccountLogin.php">My Account</a>

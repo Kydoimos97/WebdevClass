@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
         <section class="container w-75 h-90 background-default p-5">
 
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <?php
+                <?php // present while loop and tables
                 while ($product = mysqli_fetch_array(
                     $all_cards, MYSQLI_ASSOC)):
                     ?>

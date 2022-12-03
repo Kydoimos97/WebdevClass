@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
 
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <?php
-                global $kpi;
+                global $kpi; //present php code while loop
                 while ($kpi = mysqli_fetch_array(
                     $all_kpi, MYSQLI_ASSOC)):
                     ?>

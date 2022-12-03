@@ -10,12 +10,12 @@ function updateUser(): void
     }
 
     if (!$incompleteFlag) {
-        if (isset($_POST['password']) && isset($_POST['passwordConfirm']) && $_POST['password'] != "Password" && !empty($_POST['password'])) {
+        if (isset($_POST['password']) && isset($_POST['passwordConfirm']) && $_POST['password'] != "Password" && !empty($_POST['password'])) { // present check if all fields are filled
             $passWord = $_POST['password'];
             $passWordConfirm = $_POST['passwordConfirm'];
             include_once("passwordChecker.php");
-            $passHash = passChecker($passWord, $passWordConfirm);
-            if ($passHash != "false" && !empty($passHash)) { //Check if this doesn't give an error
+            $passHash = passChecker($passWord, $passWordConfirm); // present check if passwords match and if they fill requirements
+            if ($passHash != "false" && !empty($passHash)) {  // present hash the password
                 createUser();
             }
         } elseif (isset($_POST['password']) && $_POST['password'] === "") {
@@ -27,7 +27,7 @@ function updateUser(): void
     }
 }
 
-function createUser(): void
+function createUser(): void // present push user
 {
     // Connect to DB
     $conn = mysqli_connect("localhost", "root", "", "urbanstore");
@@ -40,7 +40,7 @@ function createUser(): void
     $userName = $_POST['userName'];
     $emailFlag = false;
 
-    if (filter_var($userName, FILTER_VALIDATE_EMAIL)) {
+    if (filter_var($userName, FILTER_VALIDATE_EMAIL)) { // present check if user is an email
         if (str_contains(strtolower($userName), "admin")) {
             $_SESSION["message"] = "Email contains forbidden substring";
         } else {

@@ -11,7 +11,7 @@ function logIn(): void
         while ($row = $result->fetch_assoc()) {
             if (!empty($row)) {
                 $hashedPassword = $row["password"];
-                if (password_verify($_POST["password"], $hashedPassword)) {
+                if (password_verify($_POST["password"], $hashedPassword)) { // present Desalt and rehash
                     $isSuccess = 1;
                 }
             }

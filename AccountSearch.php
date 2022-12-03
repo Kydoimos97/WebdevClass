@@ -7,6 +7,10 @@ if (isset($_POST['searchName']) && !empty($_POST['searchName'])) {
     $_SESSION['searchName'] = $_POST['searchName'];
 }
 
+if (!isset($_SESSION['userName']) || $_SESSION['userName'] == "") {
+    header("Location: UnAuthorized.html");
+}
+
 if (!isset($_SESSION['AuthSession']) | !isset($_SESSION['userName'])) {
     if ($_SESSION['userName'] != "admin") {
         require_once("SourceCode/Scripts/logOut.php");

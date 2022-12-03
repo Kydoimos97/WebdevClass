@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
 
 <body onload="checkCookie()">
 <div class="wrapper">
-    <!-- Sidebar  -->
+    <!-- Sidebar present admin access -->
     <nav id="sidebar">
         <div class="sidebar-header">
             <p class="h3-sidebar">Navigation</p>
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
     <!-- Page Content  -->
     <div id="content_hidden">
 
-        <!-- Navbar -->
+        <!-- Navbar  present shopping cart and user update-->
         <nav class="navbar-default">
             <div class="container-fluid">
                 <!--        left side of navbar-->
@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
             </div>
         </nav>
 
-        <!--login-->
+        <!--login -->
         <!--        This means it is a container with 100% height and a default background-->
         <div class="pt-5"></div>
         <section class="container background-default">
@@ -363,7 +363,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
 </div>
 
 
-<!-- jQuery CDN - Slim version (=without AJAX) -->
+<!-- jQuery CDN - Slim version (=without AJAX) present javascript sidebar toggle-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

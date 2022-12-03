@@ -25,6 +25,7 @@ CREATE TABLE `users`
     `city`        varchar(100) NOT NULL,
     `state`       varchar(100) NOT NULL,
     `zip`         varchar(100) NOT NULL,
+    `points`        int(100) not NULL,
     `role`        varchar(100) NOT NULL
 ) ENGINE = InnoDB
   DEFAULT CHARSET = latin1;
@@ -35,11 +36,19 @@ CREATE TABLE `users`
 
 INSERT INTO `users`
 VALUES (1, 'admin', '$2a$10$0FHEQ5/cplO3eEKillHvh.y009Wsf4WCKvQHsZntLamTUToIBe.fG', 'I am the admin', 'Admin',
-        '100w 100s', 'Salt Lake City', 'UT', '84102', 'admin');
+        '100w 100s', 'Salt Lake City', 'UT', '84102', 435221, 'admin');
 
 INSERT INTO `users`
 VALUES (2, 'msis@utah.edu', '$2y$10$IASw3hGOm.nbnT8Fk.7vxu571A4Z6wQfltx5lhfdYwV6bzVqG32IO', 'testPhrase', 'Msis',
-        '500w 500s', 'Salt Lake City', 'UT', '84111', 'user');
+        '500w 500s', 'Salt Lake City', 'UT', '84111', 0, 'user');
+
+INSERT INTO `users`
+VALUES (3, 'bsmith', '$2y$10$1LB0B5Uv6kzDLR0geDIQ5eQht9RZgSw4X5baMhWD28nf3BDnFhau2', 'I am the admin', 'Bert Smith',
+        '100w 100s', 'London', 'AK', '12111', 5342235, 'admin');
+
+INSERT INTO `users`
+VALUES (4, 'pjones', '$2y$10$O5.EOKD4MN477OaNiRObP.tS6vmJuSt/BKDLj3CN21KfH40rrWTmq', 'I am here for grading', 'Peter Jones',
+        '500w 500s', 'Amsterdam', 'AR', '12102', 12523, 'user');
 
 --
 -- Indexes for table `users`

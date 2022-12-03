@@ -53,10 +53,10 @@ function createUser(): void
     // Update user
     if ($emailFlag) {
         $result = mysqli_query($conn, "SELECT * FROM `users` WHERE userName = '" . $userName . "'");
-        if ($result->num_rows > 0) {
+        if ($result->num_rows == 0) {
             $passWord = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $displayName = ucfirst(strtok($userName, '@'));
-            $result = mysqli_query($conn, "INSERT INTO users (userName, password, displayName, security, adress, city, state, zip, points) VALUES ('" . $userName . "', '" . $passWord . "', '" . $displayName . "', '" . $_POST['securityPhrase'] . "', '" . $_POST['adressLine'] . "' , '" . $_POST['cityInp'] . "', '" . $_POST['state'] . "', '" . $_POST['zip'] . "',  0)");
+            $result = mysqli_query($conn, "INSERT INTO users (userName, `password`, displayName, `security`, adress, city, state, zip, points, `role`) VALUES ('" . $userName . "', '" . $passWord . "', '" . $displayName . "', '" . $_POST['securityPhrase'] . "', '" . $_POST['adressLine'] . "' , '" . $_POST['cityInp'] . "', '" . $_POST['state'] . "', '" . $_POST['zip'] . "',  0, 'user')");
             if ($result) {
                 $_SESSION['message'] = "User Successfully Created, redirecting in 2 seconds";
                 header("refresh:2;url=Index.php");
@@ -64,7 +64,7 @@ function createUser(): void
                 $_SESSION['message'] = "An error Occurred while creating user";
             }
         } else {
-            $_SESSION['message'] = "Account already exists with the given email";
+            $_SESSION['message'] = "Account already exists with the given email" . print_r($result->num_rows);
         }
     } else {
         $_SESSION['message'] = "User creation failed try again";

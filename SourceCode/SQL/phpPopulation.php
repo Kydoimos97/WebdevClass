@@ -30,7 +30,7 @@ try {
 
     $result = mysqli_query($conn, $sql);
 
-    $counter = 0;
+    $counter = -1; // INDEX ERROR OFFSET FIX
     foreach ($dir as $fileinfo) {
         shuffle($brandNames);
         shuffle($clothingtypes);

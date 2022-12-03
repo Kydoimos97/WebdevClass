@@ -65,22 +65,28 @@ function accountCheck(array $userData): void
 function passChecker(string $passWord, string $confirmPass): string
 {
 
-    $uppercaseFlag = preg_match('@[A-Z].*[A-Z]@', $passWord); // Two Upper case needed
-    $lowercaseFLag = preg_match('@[a-z].*[A-Z]@', $passWord); // Two lower case needed
+    $uppercaseFlag = preg_match('@[A-Z].*[A-Z]@', $passWord); // One Upper case needed
+    $lowercaseFLag = preg_match('@[a-z].*[A-Z]@', $passWord); // One lower case needed
     $numberFlag = preg_match('@[0-9].*[0-9]@', $passWord);
     $specialCharsFlag = preg_match('@[^\w].*[^\w]@', $passWord);
     $lengthFlag = strlen($passWord) > 10;
 
-    if (!$uppercaseFlag || !$lowercaseFLag || !$numberFlag || !$specialCharsFlag || !$lengthFlag) {
-        $_SESSION['message'] = "Password needs at least 2 uppercase, lowercase, numbers, and special characters.";
+    if ($passWord != $confirmPass) {
+        $_SESSION['message'] = "Passwords do not match";
         return "false";
     } else {
-        if ($passWord != $confirmPass) {
-            $_SESSION['message'] = "Passwords do not match";
-            return "false";
-        } else {
-            return password_hash($passWord, PASSWORD_DEFAULT);
-        }
+        return password_hash($passWord, PASSWORD_DEFAULT);
     }
+//    if (!$lowercaseFLag || !$numberFlag || !$specialCharsFlag || !$lengthFlag) {
+//        $_SESSION['message'] = "Password needs at least 2 uppercase, lowercase, numbers, and special characters with a length over 10 characters.";
+//        return "false";
+//    } else {
+//        if ($passWord != $confirmPass) {
+//            $_SESSION['message'] = "Passwords do not match";
+//            return "false";
+//        } else {
+//            return password_hash($passWord, PASSWORD_DEFAULT);
+//        }
+//    }
 }
 

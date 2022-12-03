@@ -31,9 +31,6 @@ ALTER TABLE `product`
 --
 -- AUTO_INCREMENT for table `product`
 --
-ALTER TABLE `product`
-    MODIFY `id` int(8) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 2;
 
 --
 -- Dumping data for table `product`

@@ -1,6 +1,6 @@
 <?php
 
-function shoppingCart(): string|null
+function shoppingCart(): string
 {
     if (isset($_SESSION['userName']) && $_SESSION['userName'] != "") {
         $conn = mysqli_connect("localhost", "root", "", "urbanstore");

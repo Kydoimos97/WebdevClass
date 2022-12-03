@@ -8,7 +8,7 @@ $sql = "SELECT * FROM users where userName = '" . $_SESSION['userName'] . "'";
 $result = mysqli_query($conn, $sql);
 $userData = mysqli_fetch_array($result);
 
-if (!isset($_SESSION['AuthSession']) | !isset($_SESSION['userName'])) {
+if (!isset($_SESSION['AuthSession']) || !isset($_SESSION['userName']) || $_SESSION['userName'] == "") {
     header("Location:AccountLogin.php");
 }
 // Connect to the database and get the userdata

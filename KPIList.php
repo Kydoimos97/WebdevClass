@@ -4,6 +4,9 @@ $conn = mysqli_connect("localhost", "root", "", "urbanstore");
 $sql = "SELECT * FROM `kpi`";
 $all_kpi = mysqli_query($conn, $sql);
 
+if (!isset($_SESSION['userName']) || $_SESSION['userName'] == "") {
+    header("Location: UnAuthorized.html");
+}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
     require_once("SourceCode/Scripts/logOut.php");

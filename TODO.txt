@@ -15,7 +15,7 @@ All -- Lock scrollbar to top
 Web Demo Presentation (10 Minute)
 
 Introduction
--Include our group and project introduction
+-Include our group and project introduction (Joel)
 
 Webpage and Case Use Demo
 -Account Login(Justin)
@@ -25,14 +25,15 @@ Webpage and Case Use Demo
     -ho
 -Admin Page (Justin)
     -ho
--KPI List (Justin)
+-Account Search (Justin)
+-KPI List (Joel)
     -ho
--KPI Viewer (Justin)
+-KPI Viewer (Joel)
 -ProductStore (Joel)
     -ho
 -Product Detail (Joel)
     -ho
--Account Search (Joel)
+
 -Product Cart (Joel)
     -ho
 

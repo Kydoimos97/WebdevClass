@@ -8,6 +8,10 @@ $conn = mysqli_connect("localhost", "root", "", "urbanstore");
 $result = mysqli_query($conn, "SELECT name FROM kpi where image = '" . $image . "'");
 $kpiName = mysqli_fetch_array($result)['name'];
 
+if (!isset($_SESSION['userName']) || $_SESSION['userName'] == "") {
+    header("Location: UnAuthorized.html");
+}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['clearCookie'])) {
     require_once("SourceCode/Scripts/logOut.php");
     logOut();

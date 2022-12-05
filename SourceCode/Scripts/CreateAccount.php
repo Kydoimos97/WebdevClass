@@ -64,7 +64,7 @@ function createUser(): void // present push user
                 $_SESSION['message'] = "An error Occurred while creating user";
             }
         } else {
-            $_SESSION['message'] = "Account already exists with the given email" . print_r($result->num_rows);
+            $_SESSION['message'] = "Account already exists with the given email";
         }
     } else {
         $_SESSION['message'] = "User creation failed try again";
